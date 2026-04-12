@@ -1,22 +1,21 @@
-public class Caminhao extends Veiculo{
-
+package model.entities;
+public class Moto extends Veiculo{
     //atributos
-    String CapacidadeCarga;
+    int cilindradas; // cc
 
-    public Caminhao(String placa, String marca, String modelo, double capacidTanque, double ConsMedio, String tipoCombustivel , String CapacidadeCarga) {
+    public Moto(String placa, String marca, String modelo, double capacidTanque, double ConsMedio, String tipoCombustivel, int cilindradas) {
         super(placa, marca, modelo, capacidTanque, ConsMedio, tipoCombustivel);
-        this.CapacidadeCarga = CapacidadeCarga;
+        this.cilindradas = cilindradas;
     }
 
     @Override
     void exibirDetalhes() {
-        System.out.println("=== DETALHES DO CAMINHÃO ===");
+        System.out.println("=== DETALHES DA MOTO ===");
         System.out.println("Placa: " + this.placa);
         System.out.println("Modelo: " + this.modelo);
-        System.out.println("Capacidade de Carga: " + this.CapacidadeCarga + " toneladas");
+        System.out.println("Cilindradas: " + this.cilindradas);
         System.out.println("Status Atual: " + this.Status);
         System.out.println("Quilometragem: " + this.odometro + " km");
         System.out.println("============================");
     }
-
 }
